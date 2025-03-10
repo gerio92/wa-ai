@@ -31,17 +31,10 @@ Route::get('/panggil', function () {
     return view('panggil');
 });
 Route::get('/get-pasien/{noregister}', [TransaksiController::class, 'getPasien'])->name('get-pasien');
-// Route::post('/save-transaksi', [TransaksiController::class, 'store']);
 Route::post('/save-transaksi', [TransaksiController::class, 'saveTransaksi'])->name('save-transaksi');;
-
-
 
 Route::get('/report', function () {
     return view('report');
 });
 
-// Route CRUD Pasien
-// Route::get('/tambah-pasien', [PasienController::class, 'create'])->name('pasien.create');
-Route::get('/pasien', [PasienController::class, 'index'])->name('pasien.index'); // Menampilkan daftar pasien
-// Route::post('/pasien', [PasienController::class, 'store'])->name('pasien.store');
-// Route::get('/panggil/search', [PasienController::class, 'search'])->name('pasien.search');
+Route::get('/pasien', [PasienController::class, 'index'])->name('pasien.index');
