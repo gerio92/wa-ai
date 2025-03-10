@@ -151,8 +151,28 @@
         }
     </style>
 </head>
-t" class="form-control" id="nomrm" name="nomrm" placeholder="Masukkan Nomor RM" required>
+<body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <span class="navbar-brand">Pendaftaran Pasien Ke Poli</span>
+            <div class="d-flex align-items-center">
+                <img src="https://via.placeholder.com/40" alt="Profile" class="rounded-circle profile-icon me-2">
+                <span class="navbar-text">Admin User</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="section fade-in">
+            <h3 class="mb-4 text-center">Input Data Pasien</h3>
+            <form action="{{ route('drtransaksi.store') }}" method="POST">
+                @csrf
+                <div class="mb-3">
+                    <label for="nomrm" class="form-label">Nomor RM</label>
+                    <input type="text" class="form-control" id="nomrm" name="nomrm" placeholder="Masukkan Nomor RM" required>
                 </div>
+
 
                 <div class="row mb-3">
                     <div class="col-md-4">
