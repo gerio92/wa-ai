@@ -21,13 +21,11 @@ class DrTransaksi extends Model
 
     protected $dates = ['tgl_praktek', 'created_at', 'updated_at'];
 
-    // Relasi ke dokter
     public function dokter()
     {
         return $this->belongsTo(Dokter::class, 'id_dokter');
     }
 
-    // Relasi ke poli
     public function poli()
     {
         return $this->belongsTo(Poli::class, 'id_poli');
