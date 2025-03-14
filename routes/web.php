@@ -37,4 +37,5 @@ Route::get('/report', function () {
     return view('report');
 });
 
-Route::get('/pasien', [PasienController::class, 'index'])->name('pasien.index');
+Route::get('/daftar', [PasienController::class, 'index'])->name('pasien.index');
+Route::post('/daftar', [PasienController::class, 'store'])->name('pasien.store');
