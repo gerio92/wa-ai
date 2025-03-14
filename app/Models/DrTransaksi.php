@@ -15,7 +15,7 @@ class DrTransaksi extends Model
     protected $fillable = [
         'id_pasien', 'id_poli', 'id_dokter', 'tgl_praktek',
         'antrian', 'id_praktek_dokter', 'waktu_jam', 'waktu_pending',
-        'name_user', 'noregister', 'nmpasien', 'created_at', 'updated_at'
+        'name_user', 'noregister','kode_booking', 'nmpasien', 'created_at', 'updated_at'
     ];
     
 

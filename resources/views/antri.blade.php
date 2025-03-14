@@ -188,10 +188,15 @@
                         <input type="text" class="form-control" id="alamat" name="alamat" disabled>
                     </div>
                 </div>
-
-                <div class="mb-3">
+                <div class="row">
+                <div class="col-md-6">
+                    <label for="kode_booking" class="form-label">Kode Booking</label>
+                    <input type="text" class="form-control" id="kode_booking" name="kode_booking" placeholder="Masukkan Kode Booking" required>
+                </div>
+                <div class="col-md-6">
                     <label for="noregister" class="form-label">Nomor Register</label>
                     <input type="text" class="form-control" id="noregister" name="noregister" placeholder="Masukkan Nomor Register" required>
+                </div>
                 </div>
 
                 <div class="row mb-3">
@@ -218,8 +223,8 @@
                         <input type="date" class="form-control" id="tgl_praktek" name="tgl_praktek" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="no_antrian" class="form-label">Nomor Antrian</label>
-                        <input type="text" class="form-control" id="no_antrian" name="no_antrian" required>
+                        <label for="antrian" class="form-label">Nomor Antrian</label>
+                        <input type="text" class="form-control" id="antrian" name="antrian" required>
                     </div>
                 </div>
 

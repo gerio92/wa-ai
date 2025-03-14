@@ -33,9 +33,11 @@ class DrTransaksiController extends Controller
         $request->validate([
             'nomrm' => 'required',
             'noregister' => 'required',
+            'kode_booking' => 'required',
             'poli_tujuan' => 'required',
             'nama_dokter' => 'required',
             'id_praktek_dokter' => 'required',
+            'antrian' => 'required|integer',
         ]);
         $pasien = Pasien::where('nomrm', $request->nomrm)->first();
         if (!$pasien) {
@@ -46,13 +48,14 @@ class DrTransaksiController extends Controller
             'id_poli' => $request->poli_tujuan,
             'id_dokter' => $request->nama_dokter,
             'tgl_praktek' => $request->tgl_praktek,
-            'antrian' => $request->antrian,
             'id_praktek_dokter' => $request->id_praktek_dokter,
             'waktu_jam' => $request->id_praktek_dokter == 1 ? $request->waktu_jam : null,
             'waktu_pending' => $request->id_praktek_dokter == 2 ? $request->waktu_pending : null,
             'name_user' => auth()->check() ? auth()->user()->name_user : 'Admin',
             'noregister' => $request->noregister,
+            'kode_booking' => $request->kode_booking,
             'nmpasien' => $pasien->nama_pasien,
+            'antrian' => $request->antrian,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
